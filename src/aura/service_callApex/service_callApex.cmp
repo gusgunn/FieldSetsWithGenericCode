@@ -1,4 +1,4 @@
-<!--service_callApex .cmp -->
+<!--service_callApex  .cmp -->
 <aura:component > 
     <aura:method name="callApex" action="{!c.onCallApex}">
         <aura:attribute name="component" type="Aura.Component" />

@@ -1,5 +1,5 @@
 ({
-//service_callApex controller
+//service_callApex controller 
    onCallApex : function(component, event, helper) {
         //get the method parameters - NOTE arguments is a key word for this and you can't use any other word
         var params = event.getParams().arguments;
