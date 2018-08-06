@@ -8,6 +8,7 @@ public class Service_getFieldsets {
      * @ReturnType : String
      * @param : String objectName , String fieldSetName
      * @Description : List all the Fields that are added into the FielsSet
+     * http://www.sfdcpanther.com/how-to-use-field-set-in-lightning-component/
      */
   
     @AuraEnabled //@future
