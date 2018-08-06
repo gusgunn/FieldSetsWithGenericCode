@@ -8,6 +8,10 @@ public class Service_getFieldsets {
      * @ReturnType : String
      * @param : String objectName , String fieldSetName
      * @Description : List all the Fields that are added into the FielsSet
+<<<<<<< HEAD
+=======
+     * http://www.sfdcpanther.com/how-to-use-field-set-in-lightning-component/
+>>>>>>> 23a9943ee04a3a5b43d0edb7abc6deadd442ccc4
      */
   
     @AuraEnabled //@future
@@ -85,4 +89,8 @@ public class Service_getFieldsets {
         public List<Schema.PicklistEntry> pickListValues { get; set; }
         
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 23a9943ee04a3a5b43d0edb7abc6deadd442ccc4
