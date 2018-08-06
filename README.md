@@ -1,3 +1,3 @@
 # FieldSetsWithGenericCode
 
-See post for how to:  http://lightninghack.com/generic-fieldsets-lightning/ 
+See post for howTo:  http://lightninghack.com/generic-fieldsets-lightning/ 
