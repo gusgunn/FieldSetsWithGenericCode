@@ -1,0 +1,9 @@
+<!-- generic_recordForm_FieldSets design Resource -->
+<design:component>
+    <design:attribute name="sObjectName" label="Object" />
+    <design:attribute name="title" label="Title" />
+    <design:attribute name="numberOfColumns" label="Columns" />
+    <design:attribute name="mode" label="Mode" datasource="veiw, edit, readonly" />
+    <!-- fieldsetSelected is a String b/c design resource doesnt accpt array -->
+    <design:attribute name="fieldsetSelected" label="Fieldset label" />
+</design:component>
