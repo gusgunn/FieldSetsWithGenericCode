@@ -14,10 +14,11 @@
 	// getFieldsetSuccess pocesses the response from server and service component. 
 	// recordForm takes a String array (fields = v.fieldsArray
 	getFieldsetSuccess: function (component, returnValue) {
-		console.log('getFieldsetSuccess-->' + returnValue.length);
+		//console.log('getFieldsetSuccess-->' + returnValue.length);
+		var resultParsed = JSON.parse(returnValue);
 		var resultArray = [];
-		for (var i = 0; i < returnValue.length; i++) {
-			var result = (returnValue[i].fieldAPIName);
+		for (var i = 0; i < resultParsed.length; i++) {
+			var result = (resultParsed[i].fieldAPIName);
 			resultArray.push(result);
 		}
 		component.set("v.fieldsArray", resultArray);
