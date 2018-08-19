@@ -11,8 +11,7 @@
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
-                // response is parsed for this use case
-                var result = JSON.parse(response.getReturnValue());
+        
                 //->HERE WE CALL THE CALLBACK RATHER Than PROCESS THE RESPONSE
                 successCallback(component, result);
             }
