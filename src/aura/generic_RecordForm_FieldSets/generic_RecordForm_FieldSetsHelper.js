@@ -11,15 +11,13 @@
 			this.getFieldsetSuccess);
 	},
 
-	// getFieldsetSuccess pocesses the response from server and service component. 
+	// getFieldsetSuccess pocesses the response from server and service component.
+	// I have simplified this return from apex since we dont need anything fancy
 	// recordForm takes a String array (fields = v.fieldsArray
 	getFieldsetSuccess: function (component, returnValue) {
-		//console.log('getFieldsetSuccess-->' + returnValue.length);
-		var resultParsed = JSON.parse(returnValue);
 		var resultArray = [];
-		for (var i = 0; i < resultParsed.length; i++) {
-			var result = (resultParsed[i].fieldAPIName);
-			resultArray.push(result);
+		for (var i = 0; i < returnValue.length; i++) {
+            resultArray.push(returnValue[i]);
 		}
 		component.set("v.fieldsArray", resultArray);
 
