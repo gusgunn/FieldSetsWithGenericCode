@@ -1,7 +1,7 @@
 public class Service_getFieldsets {
      
   
-    /*
+    /* NOTE I use this class in a different way that AMIT, and I use my own client side code.
      * @Created Date:- 21th APRIL 2018
      * @Author : AMIT SINGH
      * @Name : getFieldSetMember
