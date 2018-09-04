@@ -14,7 +14,7 @@ public class Service_getFieldsets {
 >>>>>>> 23a9943ee04a3a5b43d0edb7abc6deadd442ccc4
      */
   
-    @AuraEnabled //@future
+    @AuraEnabled 
     public static String getFieldSetMember(String objectName , String fieldSetName){
         System.debug('FieldsetName--> ' + fieldSetName);
         System.debug('objectName--> ' + objectName);
@@ -40,35 +40,7 @@ public class Service_getFieldsets {
         return JSON.serialize(wrapperList);
     }
   
-    @AuraEnabled
-    public static String doUpsertObjects(sObject objectData){
-        upsert objectData;
-        return JSON.serialize(objectData);
-    }
-
-    
-    @AuraEnabled 
-    public static List<String> getsObjects(){
-        List<String> sObjectList = new List<String>();
-        FOR(Schema.SObjectType sObj : Schema.getGlobalDescribe().values()){
-            // Show only those objects which have atleast one Field Set
-            Map<String, Schema.FieldSet> FieldSetMap = sObj.getDescribe().fieldSets.getMap();
-            if(FieldSetMap!=null && FieldSetMap.keySet().size() > 0){
-                sObjectList.add(sObj.getDescribe().getName() +'####'+sObj.getDescribe().getLabel());
-            }
-        }
-        return sObjectList;
-    }
-  
-    @AuraEnabled 
-    public static List<String> getFieldSet(String sObjectName){
-        Schema.SObjectType sObj = Schema.getGlobalDescribe().get(sObjectName);
-        List<String> fieldSetList = new List<String>();
-        FOR(Schema.FieldSet FS : sObj.getDescribe().fieldSets.getMap().values()){
-            fieldSetList.add(fs.getName() +'####'+fs.getLabel());
-        }
-        return fieldSetList;
-    }
+   
     
     /*
 * @Description : Wrapper class contains the information about all the fields of a FieldSet
